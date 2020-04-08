@@ -13,7 +13,7 @@ pipeline {
                         xunit tools: [Custom(customXSL: 'unity.xsl',
                             pattern: 'build/artifacts/test/report.xml',
                             skipNoTestFiles: false,
-                            stopProcessingIfError: true)]
+                            stopProcessingIfError: false)]
                   }	
 	    }
 	} 
