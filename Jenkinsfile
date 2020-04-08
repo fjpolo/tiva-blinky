@@ -1,6 +1,11 @@
 pipeline {
     agent { dockerfile true }
     stages {
+	stage('Unit Test'){
+	    steps{
+ 	        sh 'ceedling test:all'
+	    }	
+	} 
         stage('Static Analysis') {
             steps {
                 sh 'cppcheck --xml --xml-version=2 src 2> build/cppcheck.xml'
