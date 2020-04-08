@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Target Build') {
             steps {
-                sh 'rake release_bin'
+                sh 'ceedling release_bin'
             }
             post {
                 always {
