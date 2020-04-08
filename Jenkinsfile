@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Unit Test') {
             steps {
-                sh 'ceedling test:all'
+                sh 'ceedling test:led'
             }
             post {
                   always {
