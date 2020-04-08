@@ -48,7 +48,7 @@ void delay(void)
 {
     volatile uint32_t count;
 
-    for(count = 0; count < 400000; count++)
+    for(count = 0; count < 200000; count++)
     {
     }
 }
