@@ -56,7 +56,7 @@ void test_whenLedSetToRed_thenRedPinIsSetHighAndOtherSignalsAreSetLow(void)
     GPIOPinWrite_Expect(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1);
 
     //Expect to set the green and blue pins low.
-    GPIOPinWrite_Expect(GPIO_PORTF_BASE, GPIO_PIN_2 | GPIO_PIN_3, 1);
+    GPIOPinWrite_Expect(GPIO_PORTF_BASE, GPIO_PIN_2 | GPIO_PIN_3, 0);
 
     //Call the function under test.
     LedSetRed();
