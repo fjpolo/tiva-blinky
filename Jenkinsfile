@@ -3,14 +3,14 @@ pipeline {
     stages {
         stage('Unit Test') {
             steps {
-                sh 'ceedling test:led'
+                sh 'rake test:led'
             }
             post {
                   always {
                         xunit tools: [Custom(customXSL: 'unity.xsl',
                             pattern: 'build/artifacts/test/report.xml',
-                            skipNoTestFiles: true,
-                            stopProcessingIfError: false)]
+                            skipNoTestFiles: false,
+                            stopProcessingIfError: true)]
                   }
              }
         }
